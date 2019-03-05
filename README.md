@@ -4,7 +4,7 @@
 
 ### UIImage+Extension
 
-```swfit
+```Swift
 /// 通过图片名称获取图片
 ///
 /// 通过名称取不到图片的时候，返回`UIImage()`
