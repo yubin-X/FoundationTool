@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageView = UIImage
-            .named("launch")
-//            .addWatermark(string: "username&password", attribute: [.font: UIFont.systemFont(ofSize: 200),.foregroundColor: UIColor.white], at: .center)
-            .addWatermark(attributedString: NSAttributedString(string: "username&password", attributes: [.font: UIFont.systemFont(ofSize: 100),.foregroundColor: UIColor.white]), at: .center, edgeInsets: UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0))
+            .named("desktop")
+            .addWatermark(image: UIImage.named("photos100"),at: .top, edgeInsets: UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0))
+            .addWatermark(attributedString: NSAttributedString(string: "APPLE", attributes: [.font: UIFont.systemFont(ofSize: 100),.foregroundColor: UIColor.white]), at: .center, edgeInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
             .asView()
         
         imageView.contentMode = .scaleAspectFit
@@ -27,22 +27,6 @@ class ViewController: UIViewController {
         imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
-        
-        
-        if #available(iOS 11.0, *) {
-            print(view.safeAreaInsets.bottom)
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        
-        let label = UILabel(frame: .zero)
-        label.numberOfLines = 0
-        label.backgroundColor = .white
-        label.text = "asdasdasdasdasdasdasdasdasdasdasdasdasd"
-        view.addSubview(label)
-        label.drawText(in: CGRect(x: 1000, y: 1000, width: 100, height: 100))
-        print(label.textRect(forBounds: CGRect(x: 0, y: 0, width: 100, height: 100), limitedToNumberOfLines: 0))
     }
 
 

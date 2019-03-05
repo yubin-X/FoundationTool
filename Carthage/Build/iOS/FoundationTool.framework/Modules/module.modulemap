@@ -1,0 +1,11 @@
+framework module FoundationTool {
+  umbrella header "FoundationTool.h"
+
+  export *
+  module * { export * }
+}
+
+module FoundationTool.Swift {
+    header "FoundationTool-Swift.h"
+    requires objc
+}
